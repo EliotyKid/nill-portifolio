@@ -1,6 +1,6 @@
 "use client"
-import { MenuItens } from "@/mockdata";
-import { useEffect, useState } from "react";
+import { MenuItens } from "@/mockData/MenuData";
+import React, { useEffect, useState } from "react";
 
 
 const Header = () => {
@@ -10,7 +10,7 @@ const Header = () => {
         if (typeof window === "undefined") return; // Garante que só roda no cliente
 
         const handleScroll = () => {
-            setScrolled(window.scrollY > 500);
+            setScrolled(window.scrollY > 50);
         }
 
         window.addEventListener("scroll", handleScroll)
@@ -22,8 +22,8 @@ const Header = () => {
 
     return ( 
         <header className={`w-full h-20 px-20  flex justify-center sticky top-5 z-50 ${scrolled ? "translate-y-10": ""} transition-all duration-300 `}>
-            <div className={` container w-1/8  h-full flex justify-around items-center ${scrolled ? "bg-white/10 backdrop-blur-md  border-white/30 shadow-lg w-[600px] rounded-[50px] " : "bg-gr"}  transition-all duration-300 text-white`}>
-                <div className={`${scrolled ? "hidden" : "block"}`}>
+            <div className={` container  h-full flex justify-around items-center ${scrolled ? "bg-white/10 backdrop-blur-md  border-white/30 shadow-lg w-[600px] rounded-[50px] " : "bg-gr rounded-xl"}  transition-all duration-300 text-white`}>
+                <div className={`${scrolled ? "hidden" : "hidden md:block"}`}>
                     <h1>ELIOTY</h1>
                 </div>
                 <ul className="flex flex-wrap gap-10">
@@ -36,7 +36,7 @@ const Header = () => {
                         </li>
                     ))}
                 </ul>
-                <div className={`${scrolled ? "hidden" : "block"}`}>
+                <div className={`${scrolled ? "hidden" : "hidden md:block"}`}>
                     <button type="button">SEND</button>
                 </div>
             </div>

@@ -8,8 +8,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        bk: "#0c0c0c",
-        gr: "#252525"
+        bk: "#000",
+        gr: "#080808",
+        fg: "#101010"
       }
     }
   },
