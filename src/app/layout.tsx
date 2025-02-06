@@ -18,7 +18,7 @@ export default function RootLayout({
         <body className="bg-bk flex flex-col items-center ">
           <Header/>
           {children}
-          <div className="w-full h-[5000px]"></div>
+          <div className="w-full"></div>
           <Footer/>
         </body>
     </html>

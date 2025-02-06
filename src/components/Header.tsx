@@ -1,10 +1,16 @@
 "use client"
 import { MenuItens } from "@/mockData/MenuData";
 import React, { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 
 const Header = () => {
     const [scrolled,setScrolled] = useState(false)
+    const router = useRouter()
+
+    const handleNavigation = (route: string) => {
+        router.push(route)
+    }
 
     useEffect(() => {
         if (typeof window === "undefined") return; // Garante que só roda no cliente
@@ -31,6 +37,7 @@ const Header = () => {
                         <li 
                             key={iten.id}
                             className="cursor-pointer border border-white/0 hover:border-white px-2 rounded-full transition-all duration-300 text-white"
+                            onClick={() => handleNavigation(iten.route)}
                         >
                             {iten.name}
                         </li>

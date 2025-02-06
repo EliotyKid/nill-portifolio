@@ -3,7 +3,7 @@ import { ExperienceData } from "@/mockData/ExperienceData";
 import ExperienceCompItem from "./ExperienceCompItem";
 import React from "react";
 
-const Hero = () => {
+const About = () => {
     return ( 
         <article className="bg-gr w-full  rounded-xl p-10 grid lg:grid-cols-2 gap-4 justify-center">
             <div className=" h-[700px] rounded-xl overflow-hidden relative">
@@ -32,4 +32,4 @@ const Hero = () => {
      );
 }
  
-export default Hero;
+export default About;

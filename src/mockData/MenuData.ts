@@ -13,26 +13,26 @@ export const MenuItens: MenuItem[] = [
     {
         id: 0,
         name: "HOME",
-        route: ""
+        route: "/"
     },
     {
         id: 1,
         name: "ABOUT",
-        route: ""
+        route: "/about"
     },
     {
         id: 2,
         name: "SERVICES",
-        route: ""
+        route: "/services"
     },
     {
         id: 3,
         name: "PROJECT",
-        route: ""
+        route: "/projects"
     },
     {
         id: 4,
         name: "CONTACT",
-        route: ""
+        route: "/contact"
     },
 ]
